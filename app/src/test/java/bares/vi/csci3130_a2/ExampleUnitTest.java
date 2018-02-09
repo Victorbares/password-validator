@@ -16,6 +16,17 @@ public class ExampleUnitTest {
     }
     @Test
     public void validateworking() throws Exception {
-        assertEquals(4, 2 + 2);
+        Validator valid = new Validator();
+
+        // Test password word
+        assertTrue((valid.validate("passWorD")>1));
+
+        //test not long enough
+        assertTrue((valid.validate("Notlong")>1));
+
+        //test password working
+        assertTrue((valid.validate("123456789")==1));
+
+
     }
 }
