@@ -19,25 +19,25 @@ public class ExampleUnitTest {
     public void Validatenotpassword() throws Exception {
         Validator valid = new Validator();
         // Test password word
-        assertTrue((valid.validate("passWorD") >= 1));
+        assertTrue((valid.validate("passWor%D") >= 1));
     }
     @Test
     public void validatelongenough() throws Exception {
         Validator valid = new Validator();
         //test not long enough
-        assertTrue((valid.validate("Notlong") >= 1));
+        assertTrue((valid.validate("Notlong%") >= 1));
     }
     @Test
     public void validatenumber() throws Exception {
         Validator valid = new Validator();
         //test require digit
-        assertTrue((valid.validate("Nodigita") >= 1));
+        assertTrue((valid.validate("Nodigita%") >= 1));
     }
     @Test
     public void validateupperandlower() throws Exception {
         Validator valid = new Validator();
         //test upper and lower case
-        assertTrue((valid.validate("nolowupp1") >= 1));
+        assertTrue((valid.validate("nolowupp1%") >= 1));
     }
     @Test
     public void validatepourcentage() throws Exception {
