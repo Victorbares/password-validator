@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(Valid.validate(mText1.getText().toString()) == 0) {
-                    mTextU.setText("Your password is good, submit it");
+                    mTextU.setText("Your password is good, you can submit it");
                 }
                 else {
                     mTextU.setText("Your password is not strong enough");
